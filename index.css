@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+body {
+  @import url("https://fonts.google.com/specimen/Red+Hat+Display");
+  background-image: url(images/pattern-background-desktop.svg);
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  height: 100vh;
+}
+main {
+  max-width: 320px;
+  border-radius: 1em;
+  max-height: 80vh;
+}  
+.avatar {
+  width: 100%;
+}
+.avatar img {
+  width: 100%;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+.content {
+  padding: 2em;
+  background-color: white;
+  text-align: center;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+.content h1{
+    font-size: 1.5rem;
+}
+.order-text {
+    line-height: 1.5;
+}
+
+.subscription-plan {
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 0.3em;
+  padding: 0.2em;
+}
+.subscription-plan .img {
+  width: 30%;
+}
+.img img {
+  width: 100%;
+}
+.payment-amount {
+  flex-direction: column;
+}
+.payment-amount p:first-child {
+  font-weight: 700;
+}
+.box ~ a {
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+  /* color: green; */
+}
+.box ~ a:hover {
+  text-decoration: none;
+  color: hsl(224, 23%, 55%);
+}
+.content button {
+  border: none;
+  background-color: hsl(245, 75%, 52%);
+  width: 100%;
+  border-radius: 0.5em;
+  padding: 1em 0.5em;
+}
+.content button a {
+  color: white;
+  font-weight: 900;
+  text-decoration: none;
+}
+.content button:hover {
+  background-color: hsl(224, 23%, 55%);
+  box-shadow: 0 5px 10px 0 #222;
+}
+.subscription-plan ~ a:last-child {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/* Multiple Compound selections */
+.content h1,
+.payment-amount p:first-child,
+.subscription-plan ~ a:last-child:hover {
+  color: hsl(223, 47%, 23%);
+}
+.content h1,
+.order-text,
+.subscription-plan,
+button {
+  margin-bottom: 1em;
+}
+.payment-amount p:last-child,
+.content > p,
+.subscription-plan ~ a:last-child {
+  color: hsl(224, 23%, 55%);
+}
+p {
+  font-size: 1rem;
+}
+
+
+/* Utility classes */
+.flex {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+/* Media -queries */
+@media (max-width: 650px) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+  }
+}
